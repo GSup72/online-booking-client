@@ -60,13 +60,6 @@ body {margin: 0px;}
     color: #484848;
   }
 
-  li{
-    list-style: none; 
-    margin: 0;
-    padding: 0;
-  }
-
-
   .modal {
     display: flex;
     align-items: center;
@@ -119,6 +112,16 @@ input {
 }
 
 .button1 {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 50%;
+}
+
+.button3{
     background-color: #000000;
     color: #fff;
     padding: 10px 20px;
