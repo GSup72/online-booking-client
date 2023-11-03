@@ -74,7 +74,7 @@ body {margin: 0px;}
     visibility: hidden;
     transition: opacity 0.3s, visibility 0.3s;
 }
-
+ 
 .modal.active {
     opacity: 1;
     visibility: visible;
