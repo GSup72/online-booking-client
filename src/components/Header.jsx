@@ -22,33 +22,33 @@ export const Header = () => {
                 <button className="button2" onClick={() => setModalActive1(true)}>Sing in</button>
             </div>
             <Modal active={modalActive} setActive={setModalActive}>
-                    <h2>Registration</h2>
+                    <h2 className="RL">Registration</h2>
                     <form id="registration-form">
                         <div class="form-group">
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" name="name" required />
+                            <label className="lb" for="name">Name:</label>
+                            <input className="input1" type="text" id="name" name="name" required />
                         </div>
                         <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required />
+                            <label className="lb" for="email">Email:</label>
+                            <input className="input1" type="email" id="email" name="email" required />
                         </div>
                         <div class="form-group">
-                            <label for="password">Password:</label>
-                            <input type="password" id="password" name="password" required />
+                            <label className="lb" for="password">Password:</label>
+                            <input className="input1" type="password" id="password" name="password" required />
                         </div>
                         <div className="center"><button type="submit" className="button1">Sign up</button></div>
                     </form>
             </Modal>
             <Modal active={modalActive1} setActive={setModalActive1}>
-            <h2>Login</h2>
+            <h2 className="RL">Login</h2>
                     <form id="registration-form">
                         <div class="form-group">
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" name="name" required />
+                            <label className="lb" for="name">Name:</label>
+                            <input className="input1" type="text" id="name" name="name" required />
                         </div>
                         <div class="form-group">
-                            <label for="password">Password:</label>
-                            <input type="password" id="password" name="password" required />
+                            <label className="lb" for="password">Password:</label>
+                            <input className="input1" type="password" id="password" name="password" required />
                         </div>
                         <div className="center"><button type="submit" className="button3">Sign in</button></div>
                     </form>

@@ -87,7 +87,7 @@ body {margin: 0px;}
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-h2 {
+.RL {
     font-size: 24px;
     margin-bottom: 20px;
     text-align: center;
@@ -97,12 +97,12 @@ h2 {
     margin-bottom: 15px;
 }
 
-label {
+.lb {
     display: block;
     font-weight: bold;
 }
 
-input {
+.input1 {
     width: 95%;
     padding: 10px;
     border: 1px solid #ccc;

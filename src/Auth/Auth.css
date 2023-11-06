@@ -1,0 +1,44 @@
+.box {
+    text-align: center;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-image:linear-gradient(50deg, rgb(0, 17, 255), rgb(255, 251, 8));
+  }
+  
+  .auth-form-container, .login-form, .register-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .box label {
+    text-align: left;
+  }
+  
+  .inlr {
+    margin: 10px 0;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+  }
+  
+  .logreg {
+    border: none;
+    background-image: linear-gradient(70deg, rgb(224, 220, 13), #FC642D);
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .link-btn {
+    background: none;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
