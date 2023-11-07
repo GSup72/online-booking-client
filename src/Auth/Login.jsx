@@ -6,8 +6,7 @@ export const Login = (props) => {
     const [password, setPassword] = useState("");
     const [username, setUsername] = useState("");
     const [error, setError] = useState("");
-    const handlePasswordChange = (e) => setPassword(e.target.value);
-    const handleUsernameChange = (e) => setUsername(e.target.value);
+    
 
     const handleLoginSubmit = async (e) => {
         e.preventDefault();
@@ -39,10 +38,9 @@ export const Login = (props) => {
             <h2>Login</h2>
             <form className="login-form">
                 <label htmlFor="username">Username</label>
-                <input className="inlr" value={username} onChange={(e) => handleUsernameChange(e)} type="username" placeholder="username" id="username" name="username" />
+                <input className="inlr" value={username} onChange={(e) => setUsername(e.target.value)} type="username" placeholder="username" id="username" name="username" />
                 <label htmlFor="password">Password</label>
-                <input className="inlr" value={password} onChange={(e) => handlePasswordChange(e)} type="password" placeholder="********" id="password" name="password" />
-                
+                <input className="inlr" value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="********" id="password" name="password" />
                 {error && <p className="error-message">{error}</p>}
                 <button className="logreg" type="submit" onClick={handleLoginSubmit}>Sign in</button>
             </form>
