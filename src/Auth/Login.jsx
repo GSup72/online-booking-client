@@ -7,7 +7,6 @@ export const Login = (props) => {
     const [username, setUsername] = useState('');
     const [error, setError] = useState('');
     const handlePasswordChange = (e) => setPassword(e.target.value);
-    const [showPasswordWarning, setShowPasswordWarning] = useState(false);
 
     const handleLoginSubmit = async (e) => {
         e.preventDefault();
@@ -33,26 +32,16 @@ export const Login = (props) => {
         }
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (password.length < 6) {
-            setShowPasswordWarning(true);
-            return;
-        }
-        setShowPasswordWarning(false);
-        console.log(username);
-    }
-
     return (
         <div className ="box">   
         <div className="auth-form-container">
             <h2>Login</h2>
-            <form className="login-form" onSubmit={handleSubmit}>
+            <form className="login-form">
                 <label htmlFor="username">Username</label>
                 <input className="inlr" value={username} onChange={(e) => setUsername(e.target.value)} type="username" placeholder="username" id="username" name="username" />
                 <label htmlFor="password">Password</label>
                 <input className="inlr" value={password} onChange={(e) => handlePasswordChange(e)} type="password" placeholder="********" id="password" name="password" />
-                {showPasswordWarning && <p className="password-warning">Password should be at least 6 characters long.</p>}
+                
                 {error && <p className="error-message">{error}</p>}
                 <button className="logreg" type="submit" onClick={handleLoginSubmit}>Sign in</button>
             </form>
