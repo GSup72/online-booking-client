@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useNavigate } from 'react-router-dom'; // Замість useHistory використовуйте useNavigate
 import axios from "axios";
 import "./Auth.css";
 
@@ -8,7 +7,6 @@ export const Register = (props) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
-  const navigate = useNavigate(); // Ініціалізуйте navigate
 
   const handleRegisterSubmit = async (e) => {
     e.preventDefault();
@@ -26,7 +24,8 @@ export const Register = (props) => {
         );
         console.log(response.data)
         if (response.data.message === "REGISTERED") {
-          navigate("/"); // Перенаправити користувача на головну сторінку після реєстрації
+          // Викликайте функцію props.onFormSwitch, якщо потрібно переключити форму
+          // або виконайте іншу логіку залежно від вашого використання
         } else if (response.data.error) {
           setError(response.data.error);
         }

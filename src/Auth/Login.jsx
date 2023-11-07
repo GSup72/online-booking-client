@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Auth.css";
+import { useNavigate } from 'react-router-dom';
+
 
 export const Login = (props) => {
     const [password, setPassword] = useState("");
     const [name, setName] = useState("");
     const [error, setError] = useState("");
-    
-    
+    const navigate = useNavigate(); 
+
     const handleLoginSubmit = async (e) => {
         e.preventDefault();
         if (!name || !password) {
@@ -24,6 +26,7 @@ export const Login = (props) => {
             if (response.data.message === "LOGGED IN") {
               // Викликайте функцію props.onFormSwitch, якщо потрібно переключити форму
               // або виконайте іншу логіку залежно від вашого використання
+              navigate('/');
             } else if (response.data.error) {
               setError(response.data.error);
             } 
