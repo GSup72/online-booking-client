@@ -16,7 +16,7 @@ export const Login = (props) => {
         } else {
           try {
             setError(''); // Очистити попереднє повідомлення про помилку
-            const response = await axios.post('http://ec2-13-53-125-66.eu-north-1.compute.amazonaws.com/api/signin', {
+            const response = await axios.post('http://ec2-16-171-234-234.eu-north-1.compute.amazonaws.com/api/signin', {
               username,
               password,
             });
