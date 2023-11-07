@@ -46,9 +46,9 @@ export const Register = (props) => {
           <label htmlFor="username">Username</label>
           <input
             className="inlr"
-            value={username}
+            value={username} onChange={(e) => setUsername(e.target.value)}
             name="username"
-            onChange={(e) => setUsername(e.target.value)}
+            
             id="username"
             placeholder="username"
           />
