@@ -1,25 +1,25 @@
 import React, { useState } from "react";
-import axios from 'axios';
+import axios from "axios";
 import "./Auth.css";
 
 export const Login = (props) => {
-    const [password, setPassword] = useState('');
-    const [username, setUsername] = useState('');
-    const [error, setError] = useState('');
+    const [password, setPassword] = useState("");
+    const [username, setUsername] = useState("");
+    const [error, setError] = useState("");
     const handlePasswordChange = (e) => setPassword(e.target.value);
 
     const handleLoginSubmit = async (e) => {
         e.preventDefault();
         if (!username || !password) {
-          setError('Please fill out both name and password.');
+          setError("Please fill out both name and password.");
         } else {
           try {
-            setError(''); // Очистити попереднє повідомлення про помилку
-            const response = await axios.post('http://ec2-16-171-234-234.eu-north-1.compute.amazonaws.com/api/signin', {
+            setError(""); // Очистити попереднє повідомлення про помилку
+            const response = await axios.post("http://ec2-16-171-234-234.eu-north-1.compute.amazonaws.com/api/signin", {
               username,
               password,
             });
-            if (response.data.message === 'LOGGED IN') {
+            if (response.data.message === "LOGGED IN") {
               // Викликайте функцію props.onFormSwitch, якщо потрібно переключити форму
               // або виконайте іншу логіку залежно від вашого використання
             } else if (response.data.error) {
@@ -27,7 +27,7 @@ export const Login = (props) => {
             } 
           } catch (error) {
             console.log(error);
-            setError('An error occurred.'); // Встановіть власне повідомлення про помилку
+            setError("An error occurred."); // Встановіть власне повідомлення про помилку
           }
         }
     };
@@ -45,7 +45,7 @@ export const Login = (props) => {
                 {error && <p className="error-message">{error}</p>}
                 <button className="logreg" type="submit" onClick={handleLoginSubmit}>Sign in</button>
             </form>
-            <button className="link-btn" onClick={() => props.onFormSwitch('register')}>Don't have an account? Register here.</button>
+            <button className="link-btn" onClick={() => props.onFormSwitch("register")}>Don"t have an account? Register here.</button>
         </div>
         </div>
     )
