@@ -11,14 +11,16 @@ export const Login = (props) => {
     const handleLoginSubmit = async (e) => {
         e.preventDefault();
         if (!username || !password) {
-          setError("Please fill out both name and password.");
+          setError("Будь-ласка, заповніть усі поля");
         } else {
           try {
-            setError(""); // Очистити попереднє повідомлення про помилку
-            const response = await axios.post("http://ec2-16-171-234-234.eu-north-1.compute.amazonaws.com/api/signin", {
+            setError("");
+            const response = await axios.post("http://ec2-16-171-234-234.eu-north-1.compute.amazonaws.com/api/signin", 
+            {
               username,
               password,
-            });
+            }
+          );
             if (response.data.message === "LOGGED IN") {
               // Викликайте функцію props.onFormSwitch, якщо потрібно переключити форму
               // або виконайте іншу логіку залежно від вашого використання
@@ -27,7 +29,7 @@ export const Login = (props) => {
             } 
           } catch (error) {
             console.log(error);
-            setError("An error occurred."); // Встановіть власне повідомлення про помилку
+            setError("Виникла помилка");
           }
         }
     };

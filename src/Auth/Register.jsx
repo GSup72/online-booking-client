@@ -4,22 +4,20 @@ import "./Auth.css";
 
 export const Register = (props) => {
   const [password, setPassword] = useState("");
-  const [username, setUsername] = useState("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-
   const [error, setError] = useState("");
 
   const handleRegisterSubmit = async (e) => {
     e.preventDefault();
-    if (!username || !password || !email) {
-      setError("Please fill out all fields.");
+    if (!name || !password || !email) {
+      setError("Будь-ласка, заповніть усі поля");
     } else {
       try {
-        setError(""); // Очистити попереднє повідомлення про помилку
-        const response = await axios.post(
-          "http://ec2-16-171-234-234.eu-north-1.compute.amazonaws.com/api/signup",
+        setError("");
+        const response = await axios.post("http://ec2-16-171-234-234.eu-north-1.compute.amazonaws.com/api/signup",
           {
-            username,
+            name,
             password,
             email,
           }
@@ -33,7 +31,7 @@ export const Register = (props) => {
         }
       } catch (error) {
         console.log(error);
-        setError("An error occurred."); // Встановіть власне повідомлення про помилку
+        setError("Виникла помилка");
       }
     }
   };
@@ -43,8 +41,8 @@ export const Register = (props) => {
       <div className="auth-form-container">
         <h2>Register</h2>
         <form className="register-form">
-          <label htmlFor="username">Username</label>
-          <input className="inlr" value={username} onChange={(e) => setUsername(e.target.value)} type="username" placeholder="username" id="username" name="username" />
+          <label htmlFor="name">name</label>
+          <input className="inlr" value={name} onChange={(e) => setName(e.target.value)} type="name" placeholder="name" id="name" name="name" />
           <label htmlFor="email">Email</label>
           <input className="inlr" value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="email@gmail.com" id="email" name="email"/>
           <label htmlFor="password">Password</label>
