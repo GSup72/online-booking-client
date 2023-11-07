@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Header } from './components/Header';
-import { Register } from './Auth/Register';
-import { Login } from './Auth/Login';
+import { Header } from './components/Header'; 
+import { Register } from './Auth/Register'; 
+import { Login } from './Auth/Login'; 
 
 function App() {
   const [currentForm, setCurrentForm] = useState('login');
