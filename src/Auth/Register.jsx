@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 import "./Auth.css";
 
 export const Register = (props) => {
@@ -7,6 +8,7 @@ export const Register = (props) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleRegisterSubmit = async (e) => {
     e.preventDefault();
@@ -24,8 +26,7 @@ export const Register = (props) => {
         );
         console.log(response.data)
         if (response.data.message === "REGISTERED") {
-          // Викликайте функцію props.onFormSwitch, якщо потрібно переключити форму
-          // або виконайте іншу логіку залежно від вашого використання
+          navigate('/');
         } else if (response.data.error) {
           setError(response.data.error);
         }
