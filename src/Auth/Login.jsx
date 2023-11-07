@@ -7,32 +7,32 @@ export const Login = (props) => {
     const [name, setName] = useState("");
     const [error, setError] = useState("");
     
-
+    
     const handleLoginSubmit = async (e) => {
-      e.preventDefault();
-      if (!name || !password) {
-          setError("Будь ласка, заповніть усі поля.");
-      } else {
+        e.preventDefault();
+        if (!name || !password) {
+          setError("Будь-ласка, заповніть усі поля");
+        } else {
           try {
-              setError(""); // Очистіть попереднє повідомлення про помилку
-              const response = await axios.post("http://ec2-16-171-234-234.eu-north-1.compute.amazonaws.com/api/signin", 
-              {
-                  name,
-                  password,
-              });
-
-              if (response.data.message === "LOGGED IN") {
-                  // Викликайте функцію props.onFormSwitch, якщо потрібно переключити форму
-                  // або виконайте іншу логіку залежно від вашого використання
-              } else if (response.data.error) {
-                  setError(response.data.error); // Виведіть помилку з сервера
-              }
+            setError("");
+            const response = await axios.post("http://ec2-16-171-234-234.eu-north-1.compute.amazonaws.com/api/signin", 
+            {
+              name,
+              password,
+            }
+          );
+            if (response.data.message === "LOGGED IN") {
+              // Викликайте функцію props.onFormSwitch, якщо потрібно переключити форму
+              // або виконайте іншу логіку залежно від вашого використання
+            } else if (response.data.error) {
+              setError(response.data.error);
+            } 
           } catch (error) {
-              console.log(error);
-              setError("Виникла помилка на сервері."); // Виведіть власну помилку
+            console.log(error);
+            setError("Виникла помилка");
           }
-      }
-  };
+        }
+    };
 
     return (
         <div className ="box">   
