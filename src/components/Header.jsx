@@ -4,7 +4,6 @@ import Modal from "../Modal/Modal";
 
 export const Header = () => {
     const [modalActive, setModalActive] = useState(false);
-    const [modalActive1, setModalActive1] = useState(false);
     return (
         <header className="header">
             <span className="header_logo">LOGO</span>
@@ -18,40 +17,13 @@ export const Header = () => {
                 </ul>
             </nav>
             <div className="header_button">
-                <button className="button0" onClick={() => setModalActive(true)}>Sign up</button>
-                <button className="button2" onClick={() => setModalActive1(true)}>Sing in</button>
+                <button className="button0" onClick={() => setModalActive(true)}>Modal</button>
             </div>
             <Modal active={modalActive} setActive={setModalActive}>
-                    <h2 className="RL">Registration</h2>
-                    <form id="registration-form">
-                        <div class="form-group">
-                            <label className="lb" for="name">Name:</label>
-                            <input className="input1" type="text" id="name" name="name" required />
-                        </div>
-                        <div class="form-group">
-                            <label className="lb" for="email">Email:</label>
-                            <input className="input1" type="email" id="email" name="email" required />
-                        </div>
-                        <div class="form-group">
-                            <label className="lb" for="password">Password:</label>
-                            <input className="input1" type="password" id="password" name="password" required />
-                        </div>
-                        <div className="center"><button type="submit" className="button1">Sign up</button></div>
-                    </form>
-            </Modal>
-            <Modal active={modalActive1} setActive={setModalActive1}>
-            <h2 className="RL">Login</h2>
-                    <form id="registration-form">
-                        <div class="form-group">
-                            <label className="lb" for="name">Name:</label>
-                            <input className="input1" type="text" id="name" name="name" required />
-                        </div>
-                        <div class="form-group">
-                            <label className="lb" for="password">Password:</label>
-                            <input className="input1" type="password" id="password" name="password" required />
-                        </div>
-                        <div className="center"><button type="submit" className="button3">Sign in</button></div>
-                    </form>
+            <h2>12312312312312321</h2>
+            <h2>12312312312312321</h2>
+            <h2>12312312312312321</h2>
+            <h2>12312312312312321</h2>
             </Modal>
         </header>
     );

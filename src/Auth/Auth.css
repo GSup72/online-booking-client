@@ -32,6 +32,7 @@
     border-radius: 10px;
     cursor: pointer;
     color: white;
+    outline: none;
   }
   
   .link-btn {
@@ -41,4 +42,10 @@
     padding: 15px;
     border-radius: 10px;
     cursor: pointer;
+  }
+
+  .password-warning {
+    color: rgb(253, 49, 49);
+    font-size: 14px;
+    margin-top: 5px;
   }

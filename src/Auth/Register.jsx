@@ -5,9 +5,15 @@ export const Register = (props) => {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
     const [name, setName] = useState('');
+    const [showPasswordWarning, setShowPasswordWarning] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (pass.length < 6) {
+            setShowPasswordWarning(true);
+            return;
+        }
+        setShowPasswordWarning(false);
         console.log(email);
     }
 
@@ -22,6 +28,7 @@ export const Register = (props) => {
             <input className="inlr" value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="email@gmail.com" id="email" name="email" />
             <label htmlFor="password">Password</label>
             <input className="inlr" value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
+            {showPasswordWarning && <p className="password-warning">Password should be at least 6 characters long.</p>}
             <button className="logreg" type="submit">Sign up</button>
         </form>
         <button className="link-btn" onClick={() => props.onFormSwitch('login')}>Already have an account? Login here.</button>
