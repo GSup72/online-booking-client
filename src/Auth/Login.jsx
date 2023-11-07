@@ -3,24 +3,19 @@ import axios from 'axios';
 import "./Auth.css";
 
 export const Login = (props) => {
-    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [username, setUsername] = useState('');
     const [error, setError] = useState('');
-    const [activeTab, setActiveTab] = useState('signup');
-  
-    const handleEmailChange = (e) => setEmail(e.target.value);
     const handlePasswordChange = (e) => setPassword(e.target.value);
-    const handleUsernameChange = (e) => setUsername(e.target.value);
     const [showPasswordWarning, setShowPasswordWarning] = useState(false);
 
     const handleLoginSubmit = async (e) => {
         e.preventDefault();
         if (!username || !password) {
-          setError('Please fill out both username and password.');
+          setError('Please fill out both name and password.');
         } else {
           try {
-            setError(''); // Clear any previous error message
+            setError(''); // Очистити попереднє повідомлення про помилку
             const response = await axios.post('http://ec2-13-53-125-66.eu-north-1.compute.amazonaws.com/api/signin', {
               username,
               password,
@@ -33,7 +28,7 @@ export const Login = (props) => {
             } 
           } catch (error) {
             console.log(error);
-            setError(error);
+            setError('An error occurred.'); // Встановіть власне повідомлення про помилку
           }
         }
     };
@@ -45,19 +40,20 @@ export const Login = (props) => {
             return;
         }
         setShowPasswordWarning(false);
-        console.log(email);
+        console.log(username);
     }
 
     return (
-        <div className ="box">
+        <div className ="box">   
         <div className="auth-form-container">
             <h2>Login</h2>
             <form className="login-form" onSubmit={handleSubmit}>
-                <label htmlFor="email">Email</label>
-                <input className="inlr" value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="email@gmail.com" id="email" name="email" />
+                <label htmlFor="username">Username</label>
+                <input className="inlr" value={username} onChange={(e) => setUsername(e.target.value)} type="username" placeholder="username" id="username" name="username" />
                 <label htmlFor="password">Password</label>
                 <input className="inlr" value={password} onChange={(e) => handlePasswordChange(e)} type="password" placeholder="********" id="password" name="password" />
                 {showPasswordWarning && <p className="password-warning">Password should be at least 6 characters long.</p>}
+                {error && <p className="error-message">{error}</p>}
                 <button className="logreg" type="submit" onClick={handleLoginSubmit}>Sign in</button>
             </form>
             <button className="link-btn" onClick={() => props.onFormSwitch('register')}>Don't have an account? Register here.</button>
