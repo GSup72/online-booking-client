@@ -3,15 +3,15 @@ import axios from "axios";
 import "./Auth.css";
 
 export const Register = (props) => {
-  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
 
   const [error, setError] = useState("");
 
   const handleRegisterSubmit = async (e) => {
     e.preventDefault();
-    if (!email || !password || !username) {
+    if (!username || !password || !email) {
       setError("Please fill out all fields.");
     } else {
       try {
@@ -19,9 +19,9 @@ export const Register = (props) => {
         const response = await axios.post(
           "http://ec2-16-171-234-234.eu-north-1.compute.amazonaws.com/api/signup",
           {
-            email,
-            password,
             username,
+            password,
+            email,
           }
         );
         if (response.data.message === "REGISTERED") {
