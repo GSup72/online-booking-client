@@ -6,7 +6,7 @@ export const Register = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
-  const [showPasswordWarning, setShowPasswordWarning] = useState(false);
+
   const [error, setError] = useState("");
 
   const handleRegisterSubmit = async (e) => {
@@ -37,20 +37,11 @@ export const Register = (props) => {
     }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (password.length < 6) {
-      setShowPasswordWarning(true);
-      return;
-    }
-    setShowPasswordWarning(false);
-  };
-
   return (
     <div className="box">
       <div className="auth-form-container">
         <h2>Register</h2>
-        <form className="register-form" onSubmit={handleSubmit}>
+        <form className="register-form">
           <label htmlFor="username">Username</label>
           <input
             className="inlr"
@@ -80,11 +71,6 @@ export const Register = (props) => {
             id="password"
             name="password"
           />
-          {showPasswordWarning && (
-            <p className="password-warning">
-              Password should be at least 6 characters long.
-            </p>
-          )}
           {error && <p className="error-message">{error}</p>}
           <button className="logreg" type="submit" onClick={handleRegisterSubmit}>
             Sign up
