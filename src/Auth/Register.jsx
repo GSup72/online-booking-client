@@ -41,7 +41,7 @@ export const Register = (props) => {
       <div className="auth-form-container">
         <h2>Register</h2>
         <form className="register-form">
-          <label htmlFor="name">name</label>
+          <label htmlFor="name">Name</label>
           <input className="inlr" value={name} onChange={(e) => setName(e.target.value)} type="name" placeholder="name" id="name" name="name" />
           <label htmlFor="email">Email</label>
           <input className="inlr" value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="email@gmail.com" id="email" name="email"/>
