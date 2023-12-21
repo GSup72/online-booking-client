@@ -22,7 +22,6 @@ export const Login = (props) => {
           );
             if (response.data.message === "LOGGED IN") {
               // Викликайте функцію props.onFormSwitch, якщо потрібно переключити форму
-              // або виконайте іншу логіку залежно від вашого використання
             } else if (response.data.error) {
               setError(response.data.error);
             } 

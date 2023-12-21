@@ -25,7 +25,6 @@ export const Register = (props) => {
         console.log(response.data)
         if (response.data.message === "REGISTERED") {
           // Викликайте функцію props.onFormSwitch, якщо потрібно переключити форму
-          // або виконайте іншу логіку залежно від вашого використання
         } else if (response.data.error) {
           setError(response.data.error);
         }
