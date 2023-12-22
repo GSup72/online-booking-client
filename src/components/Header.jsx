@@ -22,7 +22,7 @@ export const Header = () => {
                 <button className="button0" onClick={() => setModalActive(true)}>Maps</button>
             </div>
             <Modal active={modalActive} setActive={setModalActive}>
-            <iframe name = "myframe" title="Google Maps" width = "470px" height = "450px" src = "https://www.google.com/maps/embed/v1/place?q=Tokyo+Shopping+Center,+Uzhgorod&key=YOUR_API_KEY&center=Uzhgorod"></iframe>
+            <iframe title="Google Maps" width = "470px" height = "450px" src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2638.073250904742!2d22.264758976766736!3d48.60844111826336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473918f99ce99a35%3A0x5957f9d85e6d5b0f!2z0KLQvtC60ZbQvg!5e0!3m2!1suk!2sua!4v1703192471335!5m2!1suk!2sua"></iframe>
             </Modal>
         </header>
 
@@ -45,26 +45,26 @@ export const Header = () => {
         <span>$55</span>
         </Link>
 
-    <div class="card">
+        <Link to="/Link1" className="card">
         <img src="https://a0.muscache.com/im/pictures/f5a501f5-b772-4711-bc59-392b1cb9b809.jpg?im_w=720" alt="house 2"/>
         <h2>Квартира у місті Uzhorod</h2>
         <p>Нова чиста Квартира <br />5хв від центру</p>
         <span>$30</span>
-    </div>
+        </Link>
 
-    <div class="card">
+        <Link to="/Link1" className="card">
         <img src="https://a0.muscache.com/im/pictures/18e18cc5-6eea-4a5f-a881-98a92d22e8ef.jpg?im_w=720" alt="house 3"/>
         <h2>Квартира у місті Bern</h2>
         <p>Затишнай й удобна квартира</p>
         <span>$65</span>
-    </div>
+        </Link>
 
-    <div class="card">
+        <Link to="/Link1" className="card">
         <img src="https://a0.muscache.com/im/pictures/d73f65f7-f091-4029-8054-41fde587668a.jpg?im_w=720" alt="house 4"/>
         <h2>Квартира у місті Verona</h2>
         <p>Квартира недалеко від моря</p>
         <span>$75</span>
-    </div>
+        </Link>
     </div>
  
     <div className="rectangle-container">
@@ -94,26 +94,26 @@ export const Header = () => {
         <span>$65</span>
         </Link>
 
-    <div class="card">
+        <Link to="/Link1" className="card">
         <img src="https://a0.muscache.com/im/pictures/d73f65f7-f091-4029-8054-41fde587668a.jpg?im_w=720" alt="house 6"/>
         <h2>Квартира у місті Le Mans</h2>
         <p>Кварти для сімї <br /> затишна й практична</p>
         <span>$90</span>
-    </div>
+        </Link>
 
-    <div class="card">
+        <Link to="/Link1" className="card">
         <img src="https://a0.muscache.com/im/pictures/miso/Hosting-43782180/original/f4c6298e-4925-4a8f-bbdc-b67dbe82072c.jpeg?im_w=720" alt="house 7"/>
         <h2>Квартира у місті Cambridge</h2>
         <p>Простора й світла <br /> Також є відкрита тераса</p>
         <span>$50</span>
-    </div>
+        </Link>
 
-    <div class="card">
+        <Link to="/Link1" className="card">
         <img src="https://a0.muscache.com/im/pictures/f5a501f5-b772-4711-bc59-392b1cb9b809.jpg?im_w=720" alt="house 8"/>
         <h2>Квартира у місті Tralee</h2>
         <p>Невеличка але затишна квартира рядом з містом</p>
         <span>$45</span>
-    </div>
+        </Link>
     </div>
 
     <div class="content2">
