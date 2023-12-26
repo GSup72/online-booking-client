@@ -19,11 +19,8 @@ export const Header = () => {
                 </ul>
             </nav>
             <div className="header_button">
-                <button className="button0" onClick={() => setModalActive(true)}>Maps</button>
+            <Link to="/profile"><button className="button0">Профіль</button></Link>
             </div>
-            <Modal active={modalActive} setActive={setModalActive}>
-            <iframe title="Google Maps" width = "470px" height = "450px" src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2638.073250904742!2d22.264758976766736!3d48.60844111826336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473918f99ce99a35%3A0x5957f9d85e6d5b0f!2z0KLQvtC60ZbQvg!5e0!3m2!1suk!2sua!4v1703192471335!5m2!1suk!2sua"></iframe>
-            </Modal>
         </header>
 
         <div className="gradient-box">

@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+  }
+
+  .profile{
+    display: flex;
+    width: 50%;
+  }
+
+  .profile-container{
+    flex: 1;
+    width: 350px;
+    margin: 100px;
+    margin-left: 250px;
+    background: linear-gradient(to right, #302e29, #888571); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    border-radius: 3%;
+    color: white;
+    padding: 50px;
+    box-sizing: border-box;
+  }
+
+  .profile-info{
+    flex: 1;
+    margin-top: 90px;
+  }
+  
+  .avatar-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .avatar-container p {
+    margin-top: 1px;
+    margin-bottom: 35px;
+    text-align: center;
+  }
+  
+  .profile-container h2 {
+    font-weight: 700;
+    font-size: 24px;
+  }
+  
+  .profile-container h2 {
+    font-weight: 700;
+    font-size: 24px;
+    margin: 10px auto;
+  }
+
+  .settings{
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+
+  .settings p{
+    font-size: 16px;
+    margin: 6px auto;
+  }
+
+  .settings1{
+    margin-top: 15px;
+  }
+
+  .settings1 p{
+    font-size: 16px;
+    margin: 6px auto;
+  }
+
+
+  .profile-info h2{
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 0px;
+  }
+
+   .profile-info p{
+    font-size: 16px;
+    margin-top: 7px;
+    margin-bottom: 20px;
+   }
+
+   .profile-info button{
+    box-shadow: 0 0 10px rgba(206, 15, 15, 0.5);
+    color:  rgba(206, 15, 15);
+    background-color: white;
+    padding: 12px 45px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-bottom: 15px;
+   }

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Header } from './components/Header'; 
 import { Link1 } from './components/Link1'; 
+import { Profile } from './components/Profile'; 
 import { Register } from './Auth/Register'; 
 import { Login } from './Auth/Login'; 
 
@@ -22,6 +23,10 @@ function App() {
           <Route
             path="/link1"
             element={<Link1 />}
+          />
+          <Route
+            path="/profile"
+            element={<Profile />}
           />
           <Route
             path="/auth"
