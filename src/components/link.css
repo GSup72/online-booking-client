@@ -120,4 +120,44 @@ body {
   }
 
     /* 2 */
-    
+
+    .modal_content.active{
+      background: linear-gradient(to right, #302e29, #888571); 
+    }
+
+    .booking-form{
+      color: white;
+    }
+
+    .booking-form h2{
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .booking-form {
+      max-width: 400px;
+      margin: 5px auto;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .booking-form div {
+      margin-bottom: 12px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 7px;
+    }
+
+    input[type="date"],
+    input[type="number"] {
+      width: 90%;
+      padding: 8px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none; 
+    }
+
+

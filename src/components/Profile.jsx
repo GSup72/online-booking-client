@@ -21,7 +21,7 @@ export const Profile = () => {
                 </ul>
             </nav>
             <div className="header_button">
-            <Link to="/Link1"><button className="button0">Профіль</button></Link>
+            <Link to="/"><button className="button0">Профіль</button></Link>
             </div>
         </header>
 

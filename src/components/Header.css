@@ -187,10 +187,12 @@ input[type="search-in"] {
 
 .image-container {
   flex: 1;
+  padding-top: 20px;
 }
 
 .image-container img{
-  width: 62%;
+  width: 60%;
+  
 }
 
 /* 4 */

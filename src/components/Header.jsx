@@ -72,7 +72,7 @@ export const Header = () => {
       </div>
       <div className="image-container">
         <img
-          src="https://ipartner.com.ua/image/cache/catalog/%20123/89275823-1200x1200.png" 
+          src="https://y3h2v2a5.rocketcdn.me/wp-content/uploads/2023/09/apple-iphone-15-pro-128gb-white-titanium-mtuw3.png" 
           alt="Фото"
         />
       </div>

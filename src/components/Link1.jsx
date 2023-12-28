@@ -73,7 +73,32 @@ export const Link1 = () => {
       <p>Довгий період: $ 3000</p>
       <button onClick={() => setModalActive1(true)}><b>Резервувати</b></button>
       <Modal active={modalActive1} setActive={setModalActive1}>
-
+<div className="booking-form">
+      <div>
+        <h2>Оберіть період часу</h2>
+        <label htmlFor="period">Прибуття:</label>
+        <input type="date" id="bday" name="bday" />
+      </div>
+      <div>
+        <label htmlFor="period">Виїзд:</label>
+        <input type="date" id="bday" name="bday" />
+      </div>
+      <div>
+        <label htmlFor="guests">Кількість гостей:</label>
+        <input type="number" id="guests" min="1" max="9" />
+      </div>
+      <div>
+        <label>
+          <input type="checkbox"/>
+          Я погоджуюсь з умовами
+        </label>
+      </div>
+      <div>
+        <button>
+          Підтвердити бронювання
+        </button>
+      </div>
+    </div>
       </Modal>
       <p>Контакти</p>
     </div>

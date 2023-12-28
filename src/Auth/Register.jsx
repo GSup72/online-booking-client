@@ -15,7 +15,7 @@ export const Register = (props) => {
     } else {
       try {
         setError("");
-        const response = await axios.post("http://ec2-16-171-234-234.eu-north-1.compute.amazonaws.com/api/signup",
+        const response = await axios.post("http://ec2-16-16-207-15.eu-north-1.compute.amazonaws.com/api/signup",
           {
             name,
             password,
